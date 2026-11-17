@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook Login Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            background: #fff;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 57% 43%;
+            min-height: 100vh;
+        }
+
+        .left {
+            padding: 20px;
+            border-right: 2px solid #ddd;
+        }
+
+        #logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        h1 span {
+            color: #0866ff;
+            display: block;
+        }
+
+        #image {
+            width: 35vw;
+            max-width: 100%;
+        }
+
+        .right {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        .input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 20px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #butt {
+            background: #0866ff;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .for {
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+            font-size: 13px;
+        }
+
+        #create {
+            background: white;
+            color: #0866ff;
+            border: 2px solid #0866ff;
+            margin-top: 30px;
+        }
+
+        .meta {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .demo {
+            font-size: 11px;
+            color: #777;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                border-right: none;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            #image {
+                width: 70%;
+            }
+
+            .right {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <section class="left">
+
+        <svg id="logo" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="24" fill="#0866ff"/>
+            <text x="24" y="39"
+                  font-size="40"
+                  font-weight="bold"
+                  text-anchor="middle"
+                  fill="white">f</text>
+        </svg>
+
+        <div class="content">
+
+            <h1>
+                Explore the things
+                <span>you love.</span>
+            </h1>
+
+            <img
+                src="login-page.png"
+                alt="Facebook illustration"
+                id="image"
+            >
+
+        </div>
+
+    </section>
+
+    <section class="right">
+
+        <form onsubmit="return false;">
+
+            <h3>Log in to Facebook</h3>
+
+            <p class="demo">
+                CLASS PROJECT DEMO — DO NOT ENTER REAL ACCOUNT DETAILS
+            </p>
+
+            <input
+                type="text"
+                placeholder="Email address or mobile number"
+                class="input"
+                autocomplete="off"
+            >
+
+            <input
+                type="password"
+                placeholder="Demo password"
+                class="input"
+                autocomplete="off"
+            >
+
+            <button type="button" class="btn" id="butt">
+                Log in
+            </button>
+
+            <a href="#" class="for">
+                Forgotten password?
+            </a>
+
+            <button type="button" class="btn" id="create">
+                Create new account
+            </button>
+
+        </form>
+
+        <div class="meta">∞ Meta</div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
